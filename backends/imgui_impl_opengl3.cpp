@@ -110,7 +110,7 @@
 #if defined(_MSC_VER) && !defined(_CRT_SECURE_NO_WARNINGS)
 #define _CRT_SECURE_NO_WARNINGS
 #endif
-
+#include <glad/glad.h>
 #include "imgui.h"
 #ifndef IMGUI_DISABLE
 #include "imgui_impl_opengl3.h"

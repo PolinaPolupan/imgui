@@ -14,12 +14,12 @@ cl /Zi /MD /utf-8 /I.. /I..\.. /I%SDL2_DIR%\include main.cpp ..\..\backends\imgu
 - On Linux and similar Unixes
 
 ```
-c++ `sdl2-config --cflags` -I .. -I ../.. main.cpp ../../backends/imgui_impl_sdl2.cpp ../../backends/imgui_impl_sdlrenderer2.cpp ../../imgui*.cpp `sdl2-config --libs` -lGL
+c++ `sdl2-config --cflags` -I .. -I .. main.cpp backends/imgui_impl_sdl2.cpp backends/imgui_impl_sdlrenderer2.cpp imgui*.cpp `sdl2-config --libs` -lGL
 ```
 
 - On Mac OS X
 
 ```
 brew install sdl2
-c++ `sdl2-config --cflags` -I .. -I ../.. main.cpp ../../backends/imgui_impl_sdl2.cpp ../../backends/imgui_impl_sdlrenderer2.cpp ../../imgui*.cpp `sdl2-config --libs` -framework OpenGl
+c++ `sdl2-config --cflags` -I .. -I .. main.cpp backends/imgui_impl_sdl2.cpp backends/imgui_impl_sdlrenderer2.cpp imgui*.cpp `sdl2-config --libs` -framework OpenGl
 ```

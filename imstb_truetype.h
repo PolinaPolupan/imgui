@@ -278,7 +278,7 @@
 ////
 //
 //  Incomplete text-in-3d-api example, which draws quads properly aligned to be lossless.
-//  See "tests/truetype_demo_win32.c" for a complete version.
+//  See "truetype_demo_win32.c" for a complete version.
 #if 0
 #define STB_TRUETYPE_IMPLEMENTATION  // force following include to generate implementation
 #include "stb_truetype.h"
@@ -648,7 +648,7 @@ STBTT_DEF void stbtt_PackSetOversampling(stbtt_pack_context *spc, unsigned int h
 // h_oversample*v_oversample larger than the default; for example, 2x2
 // oversampling requires 4x the storage of 1x1. For best results, render
 // oversampled textures with bilinear filtering. Look at the readme in
-// stb/tests/oversample for information about oversampled fonts
+// stb/oversample for information about oversampled fonts
 //
 // To use with PackFontRangesGather etc., you must set it before calls
 // call to PackFontRangesGatherRects.

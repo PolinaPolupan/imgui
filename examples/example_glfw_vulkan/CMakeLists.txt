@@ -15,7 +15,7 @@ set (CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -DVK_PROTOTYPES")
 set (CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -DVK_PROTOTYPES")
 
 # GLFW
-set(GLFW_DIR ../../../glfw) # Set this to point to an up-to-date GLFW repo
+set(GLFW_DIR glfw) # Set this to point to an up-to-date GLFW repo
 option(GLFW_BUILD_EXAMPLES "Build the GLFW example programs" OFF)
 option(GLFW_BUILD_TESTS "Build the GLFW test programs" OFF)
 option(GLFW_BUILD_DOCS "Build the GLFW documentation" OFF)
@@ -25,7 +25,7 @@ add_subdirectory(${GLFW_DIR} binary_dir EXCLUDE_FROM_ALL)
 include_directories(${GLFW_DIR}/include)
 
 # Dear ImGui
-set(IMGUI_DIR ../../)
+set(IMGUI_DIR )
 include_directories(${IMGUI_DIR} ${IMGUI_DIR}/backends ..)
 
 # Libraries

@@ -17,7 +17,7 @@ CC = emcc
 CXX = em++
 WEB_DIR = web
 EXE = $(WEB_DIR)/index.html
-IMGUI_DIR = ../..
+IMGUI_DIR = ..
 SOURCES = main.cpp
 SOURCES += $(IMGUI_DIR)/imgui.cpp $(IMGUI_DIR)/imgui_demo.cpp $(IMGUI_DIR)/imgui_draw.cpp $(IMGUI_DIR)/imgui_tables.cpp $(IMGUI_DIR)/imgui_widgets.cpp
 SOURCES += $(IMGUI_DIR)/backends/imgui_impl_sdl2.cpp $(IMGUI_DIR)/backends/imgui_impl_opengl3.cpp
@@ -50,7 +50,7 @@ LDFLAGS += -s NO_FILESYSTEM=1
 CPPFLAGS += -DIMGUI_DISABLE_FILE_FUNCTIONS
 endif
 ifeq ($(USE_FILE_SYSTEM), 1)
-LDFLAGS += --no-heap-copy --preload-file ../../misc/fonts@/fonts
+LDFLAGS += --no-heap-copy --preload-file misc/fonts@/fonts
 endif
 
 ##---------------------------------------------------------------------
@@ -60,7 +60,7 @@ endif
 CPPFLAGS += -I$(IMGUI_DIR) -I$(IMGUI_DIR)/backends
 #CPPFLAGS += -g
 CPPFLAGS += -Wall -Wformat -Os $(EMS)
-LDFLAGS += --shell-file ../libs/emscripten/shell_minimal.html
+LDFLAGS += --shell-file libs/emscripten/shell_minimal.html
 LDFLAGS += $(EMS)
 
 ##---------------------------------------------------------------------

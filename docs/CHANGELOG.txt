@@ -4195,7 +4195,7 @@ Other Changes:
 - Window: Fixed pop-ups/tooltips/menus not honoring style.DisplaySafeAreaPadding as well as it should have (part of menus
   displayed outside the safe area, etc.).
 - Window: Fixed windows using the ImGuiWindowFlags_NoSavedSettings flag from not using the same default position as other windows. (#1760)
-- Window: Relaxed the internal stack size checker to allow Push/Begin/Pop/.../End patterns to be used with PushStyleColor, PushStyleVar, PushFont without causing a false positive assert. (#1767)
+- Window: Relaxed the internal stack size checker to allow Push/Begin/Pop/.End patterns to be used with PushStyleColor, PushStyleVar, PushFont without causing a false positive assert. (#1767)
 - Window: Fixed the default proportional item width lagging by one frame on resize.
 - Columns: Fixed a bug introduced in 1.51 where columns would affect the contents size of their container, often creating
   feedback loops when ImGuiWindowFlags_AlwaysAutoResize was used. (#1760)

@@ -20,8 +20,8 @@ cl /Zi /MD /utf-8 /I.. /I..\.. /I%SDL2_DIR%\include main.cpp ..\..\backends\imgu
 
 Use our Makefile or directly:
 ```
-c++ `sdl2-config --cflags` -I .. -I ../.. -I ../../backends
-  main.cpp ../../backends/imgui_impl_sdl2.cpp ../../backends/imgui_impl_opengl3.cpp ../../imgui*.cpp
+c++ `sdl2-config --cflags` -I .. -I .. -I backends
+  main.cpp backends/imgui_impl_sdl2.cpp backends/imgui_impl_opengl3.cpp imgui*.cpp
   `sdl2-config --libs` -lGL -ldl
 ```
 
@@ -30,8 +30,8 @@ c++ `sdl2-config --cflags` -I .. -I ../.. -I ../../backends
 Use our Makefile or directly:
 ```
 brew install sdl2
-c++ `sdl2-config --cflags` -I .. -I ../.. -I ../../backends
-  main.cpp ../../backends/imgui_impl_sdl2.cpp ../../backends/imgui_impl_opengl3.cpp ../../imgui*.cpp
+c++ `sdl2-config --cflags` -I .. -I .. -I backends
+  main.cpp backends/imgui_impl_sdl2.cpp backends/imgui_impl_opengl3.cpp imgui*.cpp
   `sdl2-config --libs` -framework OpenGl -framework CoreFoundation
 ```
 

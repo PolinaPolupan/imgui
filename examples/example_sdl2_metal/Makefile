@@ -7,7 +7,7 @@
 #CXX = clang++
 
 EXE = example_sdl2_metal
-IMGUI_DIR = ../..
+IMGUI_DIR = ..
 SOURCES = main.mm
 SOURCES += $(IMGUI_DIR)/imgui.cpp $(IMGUI_DIR)/imgui_demo.cpp $(IMGUI_DIR)/imgui_draw.cpp $(IMGUI_DIR)/imgui_tables.cpp $(IMGUI_DIR)/imgui_widgets.cpp
 SOURCES += $(IMGUI_DIR)/backends/imgui_impl_sdl2.cpp $(IMGUI_DIR)/backends/imgui_impl_metal.mm

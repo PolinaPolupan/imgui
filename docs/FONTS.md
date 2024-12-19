@@ -54,7 +54,7 @@ This is often of byproduct of point 3. If you have large number of glyphs or mul
 
 Some solutions:
 - You may reduce oversampling, e.g. `font_config.OversampleH = 1`, this will half your texture size for a quality loss.
-  Note that while OversampleH = 2 looks visibly very close to 3 in most situations, with OversampleH = 1 the quality drop will be noticeable. Read about oversampling [here](https://github.com/nothings/stb/blob/master/tests/oversample).
+  Note that while OversampleH = 2 looks visibly very close to 3 in most situations, with OversampleH = 1 the quality drop will be noticeable. Read about oversampling [here](https://github.com/nothings/stb/blob/master/oversample).
 - Reduce glyphs ranges by calculating them from source localization data.
   You can use the `ImFontGlyphRangesBuilder` for this purpose and rebuilding your atlas between frames when new characters are needed. This will be the biggest win!
 - Set `io.Fonts.Flags |= ImFontAtlasFlags_NoPowerOfTwoHeight;` to disable rounding the texture height to the next power of two.
@@ -273,7 +273,7 @@ Here's an application using icons ("Avoyd", https://www.avoyd.com):
 ![colored glyphs](https://user-images.githubusercontent.com/8225057/106171241-9dc4ba80-6191-11eb-8a69-ca1467b206d1.png)
 
 ```cpp
-io.Fonts->AddFontFromFileTTF("../../../imgui_dev/data/fonts/NotoSans-Regular.ttf", 16.0f);
+io.Fonts->AddFontFromFileTTF("imgui_dev/data/fonts/NotoSans-Regular.ttf", 16.0f);
 static ImWchar ranges[] = { 0x1, 0x1FFFF, 0 };
 static ImFontConfig cfg;
 cfg.OversampleH = cfg.OversampleV = 1;
@@ -365,7 +365,7 @@ In some situations, you may also use `/` path separator under Windows.
 (2) Make sure your IDE/debugger settings starts your executable from the right working (current) directory. In Visual Studio you can change your working directory in project `Properties > General > Debugging > Working Directory`. People assume that their execution will start from the root folder of the project, where by default it often starts from the folder where object or executable files are stored.
 ```cpp
 io.Fonts->AddFontFromFileTTF("MyImage01.jpg", ...);       // Relative filename depends on your Working Directory when running your program!
-io.Fonts->AddFontFromFileTTF("../MyImage01.jpg", ...);    // Load from the parent folder of your Working Directory
+io.Fonts->AddFontFromFileTTF("MyImage01.jpg", ...);    // Load from the parent folder of your Working Directory
 ```
 ##### [Return to Index](#index)
 

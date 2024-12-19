@@ -23,7 +23,7 @@ endif()
 set(CMAKE_CXX_STANDARD 17) # Dawn requires C++17
 
 # Dear ImGui
-set(IMGUI_DIR ../../)
+set(IMGUI_DIR )
 
 # Libraries
 if(EMSCRIPTEN)

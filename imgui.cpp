@@ -10199,7 +10199,7 @@ void ImGuiStackSizes::CompareWithContextState(ImGuiContext* ctx)
     IM_ASSERT(SizeOfIDStack         == window->IDStack.Size     && "PushID/PopID or TreeNode/TreePop Mismatch!");
 
     // Global stacks
-    // For color, style and font stacks there is an incentive to use Push/Begin/Pop/.../End patterns, so we relax our checks a little to allow them.
+    // For color, style and font stacks there is an incentive to use Push/Begin/Pop/.End patterns, so we relax our checks a little to allow them.
     IM_ASSERT(SizeOfGroupStack      == g.GroupStack.Size        && "BeginGroup/EndGroup Mismatch!");
     IM_ASSERT(SizeOfBeginPopupStack == g.BeginPopupStack.Size   && "BeginPopup/EndPopup or BeginMenu/EndMenu Mismatch!");
     IM_ASSERT(SizeOfDisabledStack   == g.DisabledStackSize      && "BeginDisabled/EndDisabled Mismatch!");
@@ -10366,7 +10366,7 @@ void ImGui::ItemSize(const ImVec2& size, float text_baseline_y)
 
     const float line_y1 = window->DC.IsSameLine ? window->DC.CursorPosPrevLine.y : window->DC.CursorPos.y;
     const float line_height = ImMax(window->DC.CurrLineSize.y, /*ImMax(*/window->DC.CursorPos.y - line_y1/*, 0.0f)*/ + size.y + offset_to_match_baseline_y);
-
+    
     // Always align ourselves on pixel boundaries
     //if (g.IO.KeyAlt) window->DrawList->AddRect(window->DC.CursorPos, window->DC.CursorPos + ImVec2(size.x, line_height), IM_COL32(255,0,0,200)); // [DEBUG]
     window->DC.CursorPosPrevLine.x = window->DC.CursorPos.x + size.x;
